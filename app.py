@@ -33,55 +33,48 @@ def signup():
 def predict_api():
     try:
         data = request.json['data']
-
         country_mapping = {'Other': 0,  
                            'United States': 2,
                            'India': 1,
-                           # ... (other countries)
-                           }
-
+                            'United Kingdom': 3,
+                            'Germany': 4,
+                            'Canada': 5,
+                            'Brazil': 6,
+                            'France': 7,
+                            'Spain': 8,
+                            'Australia': 9,
+                            'Netherlands': 10,
+                            'Poland': 11,
+                            'Italy': 12,
+                            'Russian Federation': 13,
+                            'Sweden': 14 }
+        
         education_mapping = {
             'Bachelor’s degree': 1,
             'Master’s degree': 2,
             'Less than a Bachelors': 0,
             'Post grad': 3,
         }
-
-        # Convert 'Country', 'education', and 'experience' to numeric values
-        if len(data) == 3:
-            country = data[0]
-            education = data[1]
-            experience = data[2]
-
-            # Convert 'Country' and 'education' to numeric values using mapping dictionaries
-            if country in country_mapping:
-                country = country_mapping[country]
-            else:
-                return jsonify({'error': 'Invalid country'})
-
-            if education in education_mapping:
-                education = education_mapping[education]
-            else:
-                return jsonify({'error': 'Invalid education level'})
-
-            # Convert 'experience' to float only if it's a string
-            if isinstance(experience, str):
-                try:
-                    experience = float(experience)
-                except ValueError:
-                    return jsonify({'error': 'Invalid experience value. Please provide a numeric value for experience.'})
-
-            # Scale the features using the loaded scalar
-            new_data = scalar.transform(np.array([country, education, experience]).reshape(1, -1))
-
-            # Predict using the transformed data
-            output = regmodel.predict(new_data)[0]
-
-            # Return the prediction result as JSON
-            return jsonify({'output': output})
-
+        # Convert string values to numeric using mapping dictionaries
+        if data['Country'] in country_mapping:
+            data['Country'] = country_mapping[data['Country']]
         else:
-            return jsonify({'error': 'Invalid input. Please provide three values: country, education, and experience'})
+            return jsonify({'error': 'Invalid country'})
+
+        if data['education'] in education_mapping:
+            data['education'] = education_mapping[data['education']]
+        else:
+            return jsonify({'error': 'Invalid education level'})
+
+        # Ensure the 'experience' value is converted to float
+        data['experience'] = float(data['experience'])
+
+        new_data = scalar.transform(np.array(list(data.values())).reshape(1, -1))
+        output = regmodel.predict(new_data)[0]
+
+        # Return the prediction result as JSON
+        return jsonify({'output': output})
+    
 
     except KeyError as e:
         # Handle the case when a required key is missing
