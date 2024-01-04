@@ -1,6 +1,7 @@
 import json
 import pickle
 from flask import Flask, request, app, jsonify, url_for, render_template
+#from forex_python.converter import CurrencyRates
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 import pandas as pd
@@ -94,15 +95,14 @@ def predict():
     # Check if required fields are not empty
     if any(value == '' for value in data.values()):
         return render_template("home.html", prediction_text="Invalid input. Please provide values for all features.")
-
-        
+    
            
     final_input = scalar.transform([list(data.values())])
     output = regmodel.predict(final_input)[0]
 
 
     formatted_output = round(output, 2)
-    return render_template("home.html", prediction_text="{}".format(formatted_output))
+    return render_template("home.html", prediction_text="$ {} [annually]".format(formatted_output))
 
 if __name__ == "__main__":
     app.run(debug=True)

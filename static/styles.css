@@ -158,3 +158,25 @@ button:hover {
   cursor: pointer;
 }
 
+.footer {
+  background-color: #fff;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left img {
+  width: 30px; /* Adjust the size of your logo */
+  margin-right: 10px;
+}
+
+.footer-right img {
+  width: 30px;
+  height: auto; 
+  margin-left: 10px;
+}
+.footer-left span {
+  color: #050505;
+  font-weight: bold; 
+  font-size: 30px; 
