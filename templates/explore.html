@@ -31,14 +31,58 @@
 <body>
     <h1>Explore Page</h1>
 
-    <h2>Number of Data from different countries</h2>
-    <img src="{{ url_for('static', filename='chart_pie.png') }}" alt="Pie Chart">
-
-    <h2>Mean Salary Based On Country</h2>
-    <img src="{{ url_for('static', filename='chart_bar.png') }}" alt="Bar Chart">
-
-    <h2>Mean Salary Based On Experience</h2>
-    <img src="{{ url_for('static', filename='chart_line.png') }}" alt="Line Chart">
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Explore the data visualization plots.</h1>
+              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            </div>
+            <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Explore data from the <a href="https://insights.stackoverflow.com/survey" target="_blank" rel="noopener noreferrer">Stack Overflow Developer Survey 2020</a>.</p>          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Number of Data from different countries (Pie Chart)</h3>
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/pie_chart.png" alt="content">
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Mean Salary Based On Country (Bar Chart)</h3>
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/bar_chart.png" alt="content">
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Mean Salary Based On Experience (Line Chart)</h3>
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/line_chart.png" alt="content">
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Count plot for Country</h3>
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/count_plot.png" alt="content">
+              </div>
+            </div>
+            <div class="xl:w-1/4 md:w-1/2 p-4">
+                <div class="bg-gray-100 p-6 rounded-lg">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Box plot for Salary Distribution </h3>
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/box_plot.png" alt="content">
+                </div>
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Bar plot for Average Salary</h3>
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/bar_plot.png" alt="content">
+          </div>
+          <div class="xl:w-1/4 md:w-1/2 p-4">
+            <div class="bg-gray-100 p-6 rounded-lg">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Scatter plot for Average Salary</h3>
+            <img class="h-40 rounded w-full object-cover object-center mb-6" src="./static/scatter_plot.png" alt="content">
+          </div>
+      </div>
+    </div>
+      </section>
 </body>
 
 </html>
