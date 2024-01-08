@@ -23,7 +23,7 @@ This project implements a web application for predicting salaries based on user 
 1. Clone the repository:
 
     ```bash
-    git clone (https://github.com/Gowthamchandu307/Salary-Prediction.git)
+    git clone https://github.com/Gowthamchandu307/Salary-Prediction.git
     cd SalaryPrediction
     ```
 
@@ -46,6 +46,14 @@ This project implements a web application for predicting salaries based on user 
 1. Enter the required details: Country, Education Level, Developer Type, and Years of Professional Coding Experience.
 2. Click on the "Predict Salary" button.
 3. The predicted salary will be displayed on the page.
+
+## Output Images:
+
+### Home Page:
+![Home Page](/static/output_images/home.png)
+
+### Explore Page:
+![Explore Page](/static/output_images/Explore.png)
 
 ## Deployment:
 
