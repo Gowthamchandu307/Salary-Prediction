@@ -50,7 +50,7 @@ This project implements a web application for predicting salaries based on user 
 ## Output Images:
 
 ### Home Page:
-![Home Page](/static/output_images/home.png)
+![Home Page](/static/output_images/home.jpeg)
 
 ### Explore Page:
 ![Explore Page](/static/output_images/Explore.png)
