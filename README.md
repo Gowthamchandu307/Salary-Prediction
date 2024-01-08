@@ -23,7 +23,7 @@ This project implements a web application for predicting salaries based on user 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/SalaryPredictionFlask.git
+    git clone (https://github.com/Gowthamchandu307/Salary-Prediction.git)
     cd SalaryPrediction
     ```
 
