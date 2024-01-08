@@ -24,7 +24,7 @@ This project implements a web application for predicting salaries based on user 
 
     ```bash
     git clone https://github.com/your-username/SalaryPredictionFlask.git
-    cd SalaryPredictionFlask
+    cd SalaryPrediction
     ```
 
 2. Install dependencies:
