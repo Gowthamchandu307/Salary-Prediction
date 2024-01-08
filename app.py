@@ -50,7 +50,7 @@ def save_plot_as_image(fig, filename):
     plt.close(fig)
 
 def save_pie_chart(data, filename):
-    plt.figure(figsize=(12,10))
+    plt.figure(figsize=(10,8))
     plt.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
     plt.axis("equal")
     plt.savefig(filename)
