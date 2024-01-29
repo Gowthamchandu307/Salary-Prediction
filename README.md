@@ -31,7 +31,7 @@ This project implements a web application for predicting salaries based on user 
 
     ```bash
     pip install -r requirements.txt
-    ```
+    
 
 3. Run the Flask application:
 
